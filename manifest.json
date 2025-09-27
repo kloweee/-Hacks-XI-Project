@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Water Usage Tracker",
+  "version": "1.0",
+  "permissions": ["storage", "activeTab"],
+  "content_scripts": [{
+    "matches": ["*://gemini.google.com/*"],
+    "js": ["content.js"]
+  }],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
