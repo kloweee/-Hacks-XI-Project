@@ -1,8 +1,8 @@
 // popup.js
 
 const waterComparisons = [
-  { name: "hamburger", ml: 1750000, unit_text: "hamburgers"},
-  { name: "shower", ml: 65000, unit_text: "showers"},
+  { name: "tomato", ml: 5678, unit_text: "grown tomatoes"},
+  { name: "plastic bag", ml: 146, unit_text: "plastic bags"},
   { name: "water bottles", ml: 500, unit_text: "bottles of water"}
 ];
 
