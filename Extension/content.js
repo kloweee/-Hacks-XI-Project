@@ -1,7 +1,7 @@
 function extractGeminiData() {
   // These are placeholders; inspect Gemini's DOM to get accurate class names
   const promptElement = document.querySelector('[class="query-text-line ng-star-inserted"]');
-  const responseElement = document.querySelector('[class="model-response-text is-mobile contains-extensions-response ng-star-inserted"]');
+  const responseElement = document.querySelector('[class="model-response-text ng-star-inserted is-mobile"]');
 
   return {
     prompt: promptElement?.innerText || '',
