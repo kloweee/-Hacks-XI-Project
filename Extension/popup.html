@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Extension</title>
+    <title>Aquaconsious Alert</title>
     <style>
         body {
             width: 200px;
+            height: 300px;
             padding: 10px;
             text-align: center;
             font-family: Arial, sans-serif;
+            border-radius: 15px;
         }
         button {
             padding: 8px 15px;
-            background-color: #4CAF50;
+            background-color: lightblue;
             color: white;
             border: none;
             border-radius: 4px;
@@ -22,9 +24,9 @@
     </style>
 </head>
 <body>
-    <h2>My First Extension!</h2>
-    <p>Click the button below:</p>
-    <button id="greetButton">Greet Me</button>
+    <h2>Heads-Up!</h2>
+    <p>You've used this ___ mL of water with this prompt! That's equivalent to ___ cheeseburgers!</p>
+    <button id="infoButton">Learn More</button>
     <script src="popup.js"></script>
 </body>
 </html>

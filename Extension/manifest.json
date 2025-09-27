@@ -1,12 +1,21 @@
 {
   "manifest_version": 3,
-  "name": "Hello World Popup",
+  "name": "Aquaconsious",
   "version": "1.0",
-  "description": "A simple 'Hello World' Chrome extension popup.",
+  "description": "Introducing Aquaconsious, a Chrome extension that reveals the environmental impact of your Gemini interactions.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icon16.png"
     }
-  }
+  },
+
+  "content_scripts": [
+    {
+        "matches": [
+            "https://gemini.google.com/*"
+        ],
+        "js": ["content.js"]
+    }
+  ]
 }
