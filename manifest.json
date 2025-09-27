@@ -2,12 +2,31 @@
   "manifest_version": 3,
   "name": "Gemini Water Usage Tracker",
   "version": "1.0",
-  "permissions": ["storage", "activeTab"],
-  "content_scripts": [{
-    "matches": ["*://gemini.google.com/*"],
-    "js": ["content.js"]
-  }],
+  "description": "Track estimated water usage of your Gemini AI prompts",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://gemini.google.com/*",
+        "*://bard.google.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "Gemini Water Usage Tracker"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   }
 }
