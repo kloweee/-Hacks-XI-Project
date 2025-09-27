@@ -1,5 +1,6 @@
 // content.js
-var promptcount = 0
+var promptcount = 0;
+var total_ml = 0;
 
 // Function to find the LAST (most recent) user prompt and AI response
 function extractLatestGeminiData() {
@@ -28,12 +29,13 @@ function extractLatestGeminiData() {
   const water_cost_ml = (water_per_token * token_count).toFixed(2); // in mL
 
   promptcount = allPrompts.length;
+  total_ml = total_ml + water_cost_ml;
 
   return {
     prompt: lastPromptElement?.innerText.trim() || 'Prompt element not found',
     answer: lastResponseEntity?.innerText.trim() || 'Response element not found',
     count: promptcount || '0',
-    water_cost: water_cost_ml || '0.00'
+    water_cost: total_ml || '0.00'
   };
 }
 
