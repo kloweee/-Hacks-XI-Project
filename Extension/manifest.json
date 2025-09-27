@@ -1,26 +1,12 @@
 {
-    "manifest_version" : 3,
-    "name" : "Water Per Prompt",
-    "version" : 1.0,
-    "permissions" : ["scripting", "activeTab", "storage"],
-
-    "action" : {
-        "defult_popup" : "popup.html",
-        "defult_icon" : "icon.png"
-    },
-
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": ["content.js"]
-        }
-    ],
-
-    "background": {
-        "service_worker" : "background.js"
-    },
-
-    "options_page": "options.html",
-
-    "host_permissions": ["<all_urls>"]
+  "manifest_version": 3,
+  "name": "Hello World Popup",
+  "version": "1.0",
+  "description": "A simple 'Hello World' Chrome extension popup.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png"
+    }
+  }
 }
