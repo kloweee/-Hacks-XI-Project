@@ -12,6 +12,12 @@
 
   "permissions": ["activeTab", "scripting"],
 
+  "host_permissions": [
+    "https://gemini.google.com/*",
+    "https://bard.google.com/*"
+  ],
+
+
   "content_scripts": [
     {
         "matches": [
