@@ -20,6 +20,7 @@ function extractLatestGeminiData() {
   const lastResponseEntity = allResponses[allResponses.length - 1];
 
   promptcount++;
+  
 
   return {
     prompt: lastPromptElement?.innerText.trim() || 'Prompt element not found',
