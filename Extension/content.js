@@ -19,8 +19,6 @@ function extractLatestGeminiData() {
   const lastPromptElement = allPrompts[allPrompts.length - 1];
   const lastResponseEntity = allResponses[allResponses.length - 1];
 
-  promptcount++;
-
   var promptText = lastPromptElement?.innerText.trim() || '';
   var answerText = lastResponseEntity?.innerText.trim() || '';
   const totalChar = promptText.length + answerText.length;
@@ -29,7 +27,7 @@ function extractLatestGeminiData() {
   const water_per_token = 0.18; // in mL/kWh
   const water_cost_ml = (water_per_token * token_count).toFixed(2); // in mL
 
-  
+  promptcount = allPrompts.length()
 
   return {
     prompt: lastPromptElement?.innerText.trim() || 'Prompt element not found',
