@@ -30,17 +30,10 @@ function extractLatestGeminiData() {
   const water_cost_ml = (water_per_token * token_count).toFixed(2); // in mL
 
   promptcount = allPrompts.length;
-  console.log(allPrompts.length);
-  console.log(all_water_costs.length);
 
   if (allPrompts.length != all_water_costs.length){
       total_ml = parseFloat(total_ml) + parseFloat(water_cost_ml); 
-  }
-
-  console.log(all_water_costs);
-
-  if (!all_water_costs.includes(water_cost_ml)){
-    all_water_costs.push(water_cost_ml);
+      all_water_costs.push(water_cost_ml);
   }
 
   // return strings/numbers to return to HTML file to display
