@@ -36,7 +36,7 @@ function setupMutationObserver() {
     // This needs to be a stable selector for the main CHAT CONTAINER 
     // that holds all conversation turns (both prompt and response blocks).
     // **YOU MUST FIND THE CORRECT CONTAINER SELECTOR FOR GEMINI**
-    const chatContainerSelector = 'YOUR_GEMINI_CHAT_CONTAINER_SELECTOR'; // e.g., 'div[role="main"]' 
+    const chatContainerSelector = 'content-container'; // e.g., 'div[role="main"]' 
     const chatContainer = document.querySelector(chatContainerSelector);
 
     if (!chatContainer) {
