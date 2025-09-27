@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gemini Extractor</title>
+  <title>Aquaconsious</title>
   <style>
-    body { font-family: sans-serif; padding: 10px; }
-    pre { background: #f4f4f4; padding: 8px; white-space: pre-wrap; }
+    body { width: 300px; font-family: sans-serif; padding: 10px; background-color: #c4efff; }
+    .info { background: #f4f4f4; padding: 8px; white-space: pre-wrap; }
+    h3 {color:#1b3c6b;}
+    h2 {color:#1b3c6b; text-align: center;}
   </style>
 </head>
 <body>
+    <h2>Aquaconsious</h2>
     <h3>Prompt:</h3>
-    <pre id="prompt"></pre>
+    <pre id="prompt" class="info"></pre>
     <h3>Response:</h3>
-    <pre id="response"></pre>
+    <pre id="response" class="info"></pre>
     <h3>Water:</h3>
-    <p id = "water_count"></p>
+    <p id = "water_count" class="info"></p>
     <h3>Count:</h3>
-    <p id = "count"></p>
+    <p id = "count" class="info"></p>
   <script src="popup.js"></script>
 </body>
 </html>
