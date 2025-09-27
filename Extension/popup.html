@@ -3,6 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Extractor</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            width: 350px;
+            padding: 15px;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        h3 {
+            margin-top: 0;
+            color: #1a73e8;
+            font-size: 1.1em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .content-box {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            white-space: pre-wrap; /* Preserve formatting and wrap text */
+        }
+        .content-box p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1a73e8;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #1558b3;
+        }
+        #status {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="status">Click 'Extract' to pull content.</div>
+
+    <h3>User Prompt:</h3>
+    <div id="promptContent" class="content-box">
+        <p>No prompt extracted yet.</p>
+    </div>
+
+    <h3>Gemini Response:</h3>
+    <div id="responseContent" class="content-box">
+        <p>No response extracted yet.</p>
+    </div>
+
+    <button id="extractButton">Extract Content</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquaconsious Alert</title>
     <style>
         body {
@@ -29,4 +109,4 @@
     <button id="infoButton">Learn More</button>
     <script src="popup.js"></script>
 </body>
-</html>
+</html> -->
