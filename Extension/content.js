@@ -29,7 +29,7 @@ function extractLatestGeminiData() {
   const water_cost_ml = (water_per_token * token_count).toFixed(2); // in mL
 
   promptcount = allPrompts.length;
-  total_ml = total_ml + water_cost_ml;
+  total_ml = parseFloat(total_ml) + parseFloat(water_cost_ml);
 
   return {
     prompt: lastPromptElement?.innerText.trim() || 'Prompt element not found',
