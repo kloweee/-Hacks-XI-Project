@@ -1,7 +1,7 @@
 function extractGeminiData() {
   // These are placeholders; inspect Gemini's DOM to get accurate class names
   const promptElement = document.querySelector('[class="query-text-line ng-star-inserted"]');
-  const responseElement = document.querySelector('[class="model-response-text ng-star-inserted is-mobile"]');
+  const responseElement = document.querySelector('[class="markdown markdown-main-panel tutor-markdown-rendering stronger enable-updated-hr-color"]');
 
   return {
     prompt: promptElement?.innerText || '',
