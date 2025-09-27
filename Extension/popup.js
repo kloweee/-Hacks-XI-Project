@@ -27,3 +27,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     // Need to return true for asynchronous sendResponse, though not strictly needed here
     // since we're not sending a response back to the content script.
 });
+
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  const url = tabs[0].url;
+  if (!url.includes('gemini.google.com') && !url.includes('bard.google.com')) {
+    document.body.innerHTML = '<p>This extension only works on Gemini AI</p>';
+    return;
+  }
+});
