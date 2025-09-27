@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Aquaconsious",
+  "name": "Aquaconscious",
   "version": "1.0",
-  "description": "Introducing Aquaconsious, a Chrome extension that reveals the environmental impact of your Gemini interactions.",
+  "description": "Introducing Aquaconscious, a Chrome extension that reveals the environmental impact of your Gemini interactions.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
