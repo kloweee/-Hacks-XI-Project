@@ -32,7 +32,7 @@ function extractLatestGeminiData() {
   return {
     prompt: lastPromptElement?.innerText.trim() || 'Prompt element not found',
     answer: lastResponseEntity?.innerText.trim() || 'Response element not found',
-    count: promptcount || 'dont know!',
+    count: promptcount || '0',
     water_cost: water_cost_ml || '0.00'
   };
 }
