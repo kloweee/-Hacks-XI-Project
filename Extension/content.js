@@ -1,4 +1,5 @@
 // content.js
+var promptcount = 0
 
 // Function to find the LAST (most recent) user prompt and AI response
 function extractLatestGeminiData() {
@@ -18,9 +19,12 @@ function extractLatestGeminiData() {
   const lastPromptElement = allPrompts[allPrompts.length - 1];
   const lastResponseEntity = allResponses[allResponses.length - 1];
 
+  promptcount++;
+
   return {
     prompt: lastPromptElement?.innerText.trim() || 'Prompt element not found',
-    answer: lastResponseEntity?.innerText.trim() || 'Response element not found'
+    answer: lastResponseEntity?.innerText.trim() || 'Response element not found',
+    count: promptcount || 'dont know!'
   };
 }
 

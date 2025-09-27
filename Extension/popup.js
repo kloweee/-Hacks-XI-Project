@@ -4,6 +4,7 @@
 function updatePopupUI(data) {
   document.getElementById("prompt").innerText = data?.prompt || "Not found";
   document.getElementById("response").innerText = data?.answer || "Not found";
+  document.getElementById("count").innerText = data?.count || "0";
 }
 
 // 1. Initial data request when the popup opens
