@@ -1,5 +1,5 @@
 
-// Function to find ALL user prompts and AI responses and calculate the cumulative cost
+// Function to find all user prompts and AI responses and calculate the cumulative cost
 function extractLatestGeminiData() {
   const promptSelector = '.query-text-line.ng-star-inserted'; 
   const responseSelector = '.markdown.markdown-main-panel';
@@ -7,10 +7,9 @@ function extractLatestGeminiData() {
   const allPrompts = document.querySelectorAll(promptSelector);
   const allResponses = document.querySelectorAll(responseSelector);
   
-  // Initialize total water cost for this *request*. This starts at 0 every time.
   let total_ml_cost = 0;
   
-  // Calculate water cost for ALL prompt/response pairs
+  // Calc water cost for all prompt and response pairs
   const conversationLength = Math.min(allPrompts.length, allResponses.length);
 
   for (let i = 0; i < conversationLength; i++) {
@@ -32,7 +31,6 @@ function extractLatestGeminiData() {
   const lastPromptElement = allPrompts[allPrompts.length - 1];
   const lastResponseEntity = allResponses[allResponses.length - 1];
   
-  // The final total water cost, formatted to two decimal places
   const final_water_cost_formatted = total_ml_cost.toFixed(2); 
 
   // return strings/numbers to return to HTML file to display
