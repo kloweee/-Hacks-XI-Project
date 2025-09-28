@@ -38,7 +38,7 @@ function updatePopupUI(data) {
   const short_prompt_threshold = 40; // num of characters
 
   if (lastPromptText.length < short_prompt_threshold && lastPromptText.length > 0){
-    shortPromptFeedbackElement.innerHTML = "Your last prompt was quite short. Consider if you want to google search!";
+    shortPromptFeedbackElement.innerHTML = "Your last prompt was quite short. Consider if you want to Google search!";
     shortPromptFeedbackElement.style.display = "block";
   } else {
     shortPromptFeedbackElement.innerHTML = "";
