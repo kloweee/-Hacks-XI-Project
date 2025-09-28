@@ -5,4 +5,4 @@ Aquaconcious can be added as an extension in your Chrome browser through a few e
 3. Upload `Extension` to `chrome://extensions/` using "Load unpacked".
 4. Open Aquaconcious in a Google Gemini tab to see your water footprint. 
 
-<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/f353388b-27ed-490f-80c6-a292ff438033" />
+<img width="25%" height="25%" alt="image" src="https://github.com/user-attachments/assets/f353388b-27ed-490f-80c6-a292ff438033" margin:auto/>
