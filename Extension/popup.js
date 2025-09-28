@@ -28,10 +28,10 @@ function updatePopupUI(data) {
   const feedbackElement = document.getElementById("feedback");
 
   if (conversationCount >= 10){
-    feedbackElement.innerText = "Hey, you seem to be using a lot of prompts. Consider optimizing questions to save water!";
+    feedbackElement.innerHTML = "Hey, you seem to be using a lot of prompts. Consider optimizing questions to save water!";
     feedbackElement.style.display = "block";
   } else {
-    feedbackElement.innerText = "";
+    feedbackElement.innerHTML = "";
     feedbackElement.style.display = "none";
   }
 }
