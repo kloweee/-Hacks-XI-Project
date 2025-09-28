@@ -24,7 +24,16 @@ function updatePopupUI(data) {
     ratio = (totalWaterMl / comparison.ml).toFixed(2);
   }
   document.getElementById("comparison").innerText = `That's equivalent to about ${ratio} ${comparison.unit_text}!`;
+  const conversationCount = parseInt(data?.count);
+  const feedbackElement = document.getElementById("feedback");
 
+  if (conversationCount >= 10){
+    feedbackElement.innerText = "Hey, you seem to be using a lot of prompts. Consider optimizing questions to save water!";
+    feedbackElement.style.display = "block";
+  } else {
+    feedbackElement.innerText = "";
+    feedbackElement.style.display = "none";
+  }
 }
 
 // 1. Initial data request when the popup opens
