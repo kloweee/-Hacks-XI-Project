@@ -15,7 +15,7 @@ function updatePopupUI(data) {
   const totalWaterMl = parseFloat(data?.water_cost) || 0;
   document.getElementById("prompt").innerText = data?.prompt || "Not found";
   document.getElementById("response").innerText = data?.answer || "Not found";
-  document.getElementById("count").innerText = data?.count || "0";
+  //document.getElementById("count").innerText = data?.count || "0";
   document.getElementById("water_count").innerText = "You used "+ data?.water_cost + " mL(s) of water so far!" || "0.00";
 
   const comparison = getRandomWaterComparison(waterComparisons);
