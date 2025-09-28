@@ -1,4 +1,3 @@
-// background.js
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.status === 'complete') {
     const isGemini = tab.url.includes('gemini.google.com') || 
