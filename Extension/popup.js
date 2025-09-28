@@ -1,5 +1,3 @@
-// popup.js
-
 const waterComparisons = [
   { name: "tomato", ml: 5678, unit_text: "grown tomatoes"},
   { name: "plastic bag", ml: 146, unit_text: "plastic bags"},
@@ -10,7 +8,7 @@ function getRandomWaterComparison(comparisons) {
   const randomIndex = Math.floor(Math.random() * comparisons.length);
   return comparisons[randomIndex];
 }
-// Function to update the popup UI
+
 function updatePopupUI(data) {
   const totalWaterMl = parseFloat(data?.water_cost) || 0;
   document.getElementById("prompt").innerText = data?.prompt || "Not found";
@@ -37,7 +35,7 @@ function updatePopupUI(data) {
 
   const lastPromptText = data?.prompt || "";
   const shortPromptFeedbackElement = document.getElementById("short_prompt_feedback");
-  const short_prompt_threshold = 40; // characters
+  const short_prompt_threshold = 40; // num of characters
 
   if (lastPromptText.length < short_prompt_threshold && lastPromptText.length > 0){
     shortPromptFeedbackElement.innerHTML = "Your last prompt was quite short. Consider if you want to google search!";
@@ -48,7 +46,6 @@ function updatePopupUI(data) {
   }
 }
 
-// 1. Initial data request when the popup opens
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   chrome.tabs.sendMessage(tabs[0].id, { type: "getGeminiData" }, (response) => {
     if (chrome.runtime.lastError) {
@@ -59,13 +56,10 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   });
 });
 
-// 2. Listener for real-time updates from content.js (via MutationObserver)
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === "geminiDataUpdate") {
         updatePopupUI(message.data);
     }
-    // Need to return true for asynchronous sendResponse, though not strictly needed here
-    // since we're not sending a response back to the content script.
 });
 
 chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
