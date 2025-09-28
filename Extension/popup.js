@@ -34,6 +34,18 @@ function updatePopupUI(data) {
     feedbackElement.innerHTML = "";
     feedbackElement.style.display = "none";
   }
+
+  const lastPromptText = data?.prompt || "";
+  const shortPromptFeedbackElement = document.getElementById("short_prompt_feedback");
+  const short_prompt_threshold = 40; // characters
+
+  if (lastPromptText.length < short_prompt_threshold && lastPromptText.length > 0){
+    shortPromptFeedbackElement.innerHTML = "Your last prompt was quite short. Consider if you are wasting water!";
+    shortPromptFeedbackElement.style.display = "block";
+  } else {
+    shortPromptFeedbackElement.innerHTML = "";
+    shortPromptFeedbackElement.style.display = "none";
+  }
 }
 
 // 1. Initial data request when the popup opens
